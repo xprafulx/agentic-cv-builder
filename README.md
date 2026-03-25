@@ -30,7 +30,6 @@ This system utilizes a **Routing & Supervisor Agent Architecture** to ensure hig
 ## ⚙️ Local Setup & Installation
 
 **1. Clone the repository**
-```bash
 git clone [https://github.com/xprafulx/agentic-cv-builder.git](https://github.com/xprafulx/agentic-cv-builder.git)
 cd agentic-cv-builder
 
