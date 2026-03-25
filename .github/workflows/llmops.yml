@@ -31,8 +31,12 @@ jobs:
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
 
     - name: Smoke Test FastAPI Startup
+      env:
+        # This connects your GitHub Secret to the cloud machine's memory
+        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       run: |
-        # This starts the server in the background and checks if it stays alive for 5 seconds
+        # Start the server in the background
         nohup python -m uvicorn api:app --host 0.0.0.0 --port 8000 & 
-        sleep 5
-        curl http://localhost:8000/docs | grep "Swagger UI"
+        sleep 10
+        # Check if the server is actually responding
+        curl --retry 5 --retry-delay 5 --retry-connrefused http://localhost:8000/docs | grep "Swagger UI"
