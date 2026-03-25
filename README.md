@@ -34,9 +34,9 @@ git clone [https://github.com/xprafulx/agentic-cv-builder.git](https://github.co
 cd agentic-cv-builder
 
 **2. Set up the Python environment**
-python -m venv venv
+`python -m venv venv
 source venv/bin/activate 
-pip install -r requirements.txt
+pip install -r requirements.txt`
 
 **3. Install LaTeX Compiler**
 brew install --cask basictex
