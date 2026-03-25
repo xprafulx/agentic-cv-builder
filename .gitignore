@@ -1,0 +1,22 @@
+cat << 'EOF' > .gitignore
+# Python Virtual Environment
+venv/
+.env
+__pycache__/
+*.py[cod]
+
+# LaTeX Compilation Junk
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# Personal & Generated Files
+*.pdf
+temp_*.pdf
+Tailored_Application.tex
+EOFmaster_profile.json
+Tailored_CV_Data.json
+.DS_Store
