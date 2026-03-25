@@ -5,6 +5,7 @@ import subprocess
 from fastapi import FastAPI, UploadFile, File, Form, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 
 from agents import (
     run_profiler_agent, 
@@ -15,7 +16,7 @@ from agents import (
 
 app = FastAPI()
 
-# Enable CORS so our local HTML file is allowed to talk to this API
+# 1. Middleware Setup
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"], 
@@ -23,6 +24,8 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# --- Helper Functions ---
 
 def extract_text_from_pdf(pdf_path: str) -> str:
     text = ""
@@ -85,6 +88,8 @@ def generate_latex_string(draft_data, template_filename="template.tex"):
 
     return final_tex
 
+# --- AI API Routes (The Engine) ---
+
 @app.post("/generate-cv/")
 async def generate_cv(file: UploadFile = File(...), job_description: str = Form(...)):
     print(f"📥 Received Request: Processing {file.filename}...")
@@ -106,10 +111,9 @@ async def generate_cv(file: UploadFile = File(...), job_description: str = Form(
         final_draft = None
         
         while attempt <= MAX_RETRIES and not is_approved:
-            time.sleep(4) # Pacing the API
+            time.sleep(4) 
             draft = run_tailor_agent(profiler_data, recruiter_data, feedback)
-            
-            time.sleep(4) # Pacing the API
+            time.sleep(4) 
             review = run_supervisor_agent(draft, recruiter_data)
             
             if review.is_approved:
@@ -124,14 +128,12 @@ async def generate_cv(file: UploadFile = File(...), job_description: str = Form(
             
         latex_content = generate_latex_string(final_draft)
         
-        # Save the .tex file
         tex_filename = "Tailored_Application.tex"
         with open(tex_filename, "w", encoding="utf-8") as f:
             f.write(latex_content)
             
-        print("⚙️ Compiling LaTeX to PDF... (This takes a few seconds)")
+        print("⚙️ Compiling LaTeX to PDF...")
         
-        # Call the MacTeX compiler
         try:
             subprocess.run(
                 ["pdflatex", "-interaction=nonstopmode", tex_filename],
@@ -144,20 +146,19 @@ async def generate_cv(file: UploadFile = File(...), job_description: str = Form(
             raise HTTPException(status_code=500, detail="Failed to compile PDF.")
 
         pdf_filename = "Tailored_Application.pdf"
-            
-        print("✅ Success! Sending PDF to frontend.")
         return FileResponse(pdf_filename, media_type="application/pdf", filename=pdf_filename)
         
     except Exception as e:
         print(f"❌ Error: {str(e)}")
         raise HTTPException(status_code=500, detail=str(e))
     finally:
-        # Clean up the temporary uploaded PDF
         if os.path.exists(temp_pdf_path):
             os.remove(temp_pdf_path)
-            
-        # Clean up LaTeX junk files
         for ext in [".aux", ".log", ".out"]:
             junk_file = f"Tailored_Application{ext}"
             if os.path.exists(junk_file):
                 os.remove(junk_file)
+
+# --- Static Files (The Front Door) ---
+# MUST be at the bottom so it doesn't override the /generate-cv/ route
+app.mount("/", StaticFiles(directory="docs", html=True), name="docs")
