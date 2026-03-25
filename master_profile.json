@@ -1,0 +1,165 @@
+{
+  "name": "Praful Shrestha",
+  "contact": "+4571529960 | sthpraful19@gmail.com | Github",
+  "summary": "Business Data Science student at Aalborg University, blending advanced AI/ML architecture with strategic market applications. Proven experience engineering large-scale NLP pipelines, multi-agent systems, and LLM-driven text analytics to solve complex business problems. Highly motivated to apply advanced data science techniques to drive business decision-making and translate technical models into actionable executive insights.",
+  "skills": [
+    "Python",
+    "PyTorch",
+    "Pandas",
+    "NumPy",
+    "Scikit-learn",
+    "Matplotlib",
+    "Seaborn",
+    "NetworkX",
+    "HuggingFace Transformers",
+    "LLM-based Extraction",
+    "Prompt Engineering",
+    "Pydantic",
+    "Topic Modeling (BERTopic)",
+    "Text Classification",
+    "Ollama",
+    "QLoRA",
+    "RNNs",
+    "UCloud",
+    "AAU AI-LAB",
+    "GPU Compute",
+    "Jupyter Notebook",
+    "Visual Studio Code",
+    "Git",
+    "Excel",
+    "CRM Systems",
+    "English",
+    "Japanese",
+    "Hindi",
+    "Nepali",
+    "Newa Bhasa"
+  ],
+  "experience": [
+    {
+      "company": "SmartMoveNepal",
+      "role": "Relationship Associate",
+      "dates": "April 2025 - July 2025",
+      "expanded_bullets": [
+        "Supported Mortgage Advisors by meticulously managing client relationships and streamlining loan application processes.",
+        "Acted as a crucial liaison, fostering seamless communication between clients, banks, and internal teams to ensure timely updates and process transparency.",
+        "Systematically collected and organized all necessary client documentation, accurately categorizing based on loan type, including refinance, pre-approval, investment, and owner-occupied.",
+        "Conducted thorough loan eligibility research utilizing Quickli, subsequently requesting and comparing optimal pricing options from various banks via their dedicated portals and the Flex platform.",
+        "Developed comprehensive product comparisons in Excel and BrokerWizard, empowering clients to make informed decisions on suitable loan options.",
+        "Constructed detailed loan applications within BrokerWizard and expertly coordinated their submission through BrokerEngine, facilitating smooth handover to operations and banking partners.",
+        "Proactively monitored loan approval statuses, efficiently uploaded supplementary documents in Flex/FMS, and maintained continuous, clear communication with banks to expedite approvals.",
+        "Managed the entire property valuation process, requesting AVM, desktop, and full valuations, alongside property reports, and diligently handled settlement updates with clients and banks.",
+        "Leveraged a suite of tools including BrokerEngine (CRM), Quickli, Flex, LastPass, and Excel to deliver exceptional client servicing and optimize loan processing workflows."
+      ]
+    },
+    {
+      "company": "Sajo Packaging Industry Pvt. Ltd.",
+      "role": "Accountant",
+      "dates": "December 2022 - May 2023",
+      "expanded_bullets": [
+        "Maintained scrupulous financial records, ensuring absolute accuracy and strict compliance with all VAT regulations.",
+        "Managed the end-to-end payroll process, accurately calculating wages, deductions, and preparing monthly financial statements for timely distribution.",
+        "Prepared detailed monthly financial statements, including income statements and balance sheets, providing critical insights into the company's fiscal health.",
+        "Assisted in the strategic monitoring of pricing structures, identifying cost-saving opportunities and contributing to margin optimization.",
+        "Monitored and tracked operational expenses rigorously, identifying discrepancies and implementing corrective measures to maintain budgetary control.",
+        "Collaborated with the management team to analyze financial data, contributing to informed decision-making regarding cost efficiency and revenue generation.",
+        "Reconciled bank statements and ledgers monthly, ensuring data integrity and identifying any financial discrepancies for prompt resolution."
+      ]
+    },
+    {
+      "company": "Nepal Bank Limited",
+      "role": "Intern",
+      "dates": "March 2022 - May 2022",
+      "expanded_bullets": [
+        "Provided essential support to the loan processing department, assisting with data entry and document verification for various loan applications.",
+        "Actively engaged in customer service activities, addressing client inquiries, providing account information, and ensuring a positive banking experience.",
+        "Maintained meticulous daily records of all banking activities, accurately tracking bank expenses, new account openings, and critical transactions in physical and digital registers.",
+        "Ensured comprehensive and accurate documentation across all banking operations, verifying forms and client information to uphold regulatory standards.",
+        "Gained practical, hands-on experience in core banking operations, including transaction processing, account management, and regulatory compliance.",
+        "Assisted senior staff in preparing daily transaction reports, contributing to the bank's operational transparency and record-keeping efficiency.",
+        "Developed a foundational understanding of financial services and customer relationship management within a regulated banking environment."
+      ]
+    },
+    {
+      "company": "Jawalakhel Group of Industries",
+      "role": "Intern",
+      "dates": "May 2017 - August 2017",
+      "expanded_bullets": [
+        "Utilized Microsoft Excel to accurately input, manage, and meticulously organize large datasets related to inventory and production records.",
+        "Performed rigorous quality checks on all entered data, identifying and correcting discrepancies to ensure high data accuracy and integrity.",
+        "Assisted in compiling weekly and monthly reports by extracting relevant data from organized spreadsheets, supporting operational analysis.",
+        "Collaborated with team members to streamline data entry processes, contributing to improved efficiency and reduced error rates.",
+        "Developed proficiency in data handling and basic spreadsheet functions, enhancing analytical support capabilities for the team.",
+        "Contributed to maintaining organized digital archives of company information, ensuring easy retrieval and accessibility for various departments.",
+        "Gained practical exposure to data management within an industrial setting, understanding its importance for business operations."
+      ]
+    },
+    {
+      "company": "Nepal Mastermind",
+      "role": "Receptionist",
+      "dates": "April 2015 - May 2017",
+      "expanded_bullets": [
+        "Efficiently managed all front-desk operations, serving as the primary point of contact for clients, visitors, and vendors.",
+        "Created and processed bills for program enrollees, ensuring accuracy and timely delivery of financial statements.",
+        "Maintained meticulous records of incoming payments and tracked program-related expenses, supporting financial oversight.",
+        "Ensured accurate documentation for all client interactions and administrative tasks, maintaining organized filing systems.",
+        "Facilitated smooth communication flow between clients and the administrative team, effectively relaying messages and scheduling appointments.",
+        "Managed the reception area, ensuring a welcoming and professional environment for all visitors.",
+        "Handled incoming and outgoing correspondence, including emails and physical mail, maintaining efficient communication channels."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Multi-Agent ESG Patent Classification System",
+      "expanded_bullets": [
+        "Architected an advanced, autonomous multi-agent AI system, assigning specialized 'advocate,' 'skeptic,' and 'judge' personas to enhance document evaluation.",
+        "Enabled the multi-agent system to intelligently evaluate and critically debate technical documents for nuanced ESG compliance, mimicking human expert review.",
+        "Leveraged QLoRA (Parameter-Efficient Fine-Tuning) to meticulously fine-tune a foundational Large Language Model, establishing it as the specialized 'brain' for the advocate agent.",
+        "Executed model fine-tuning on Aalborg University's high-performance, GPU-accelerated AI-LAB cluster, achieving optimal computational efficiency and model performance.",
+        "Successfully deployed and validated the multi-agent debate workflow, which accurately classified patents under the Y02 climate change mitigation category.",
+        "Automated complex market research processes for ESG patent analysis, significantly reducing manual effort and improving classification consistency and speed.",
+        "Presented project findings demonstrating the system's efficacy in identifying and categorizing patents relevant to climate change mitigation strategies."
+      ]
+    },
+    {
+      "name": "AI Detection & Topic Modeling of Danish News Articles (1.2M+ articles)",
+      "expanded_bullets": [
+        "Executed large-scale data processing and cleaning of over 1.2 million Danish news articles using Pandas for data manipulation.",
+        "Optimized data storage and retrieval efficiency through Parquet optimization and implemented parallel chunk-based batch processing in a secure AI-LAB HPC environment.",
+        "Applied both zero-shot and few-shot text classification techniques utilizing multilingual NLI models to accurately categorize diverse topics within the news corpus.",
+        "Developed and deployed an effective methodology for detecting AI-generated content across the vast dataset, addressing emerging concerns in media integrity.",
+        "Implemented advanced BERTopic modeling, integrating E5 sentence embeddings, UMAP for dimensionality reduction, and HDBSCAN for robust clustering, to uncover latent discourse themes.",
+        "Visualized complex topic structures and relationships, generating insightful representations for enhanced interpretability and stakeholder understanding.",
+        "Analyzed and presented key findings from the topic modeling exercise, revealing significant trends and shifts in Danish public discourse over time."
+      ]
+    },
+    {
+      "name": "LLM-Based Risk Analysis of S&P 500 Earnings Calls",
+      "expanded_bullets": [
+        "Engineered a sophisticated LLM-powered pipeline specifically designed to systematically extract structured corporate risk data from raw earnings call transcripts.",
+        "Designed and implemented a stringent JSON schema using Pydantic, ensuring rigorous validation and enforcement of structured output formats from the LLM.",
+        "Utilized advanced prompt engineering techniques to guide the LLM, guaranteeing consistent, accurate, and structured data extraction aligned with predefined schemas.",
+        "Constructed a complex company-risk bipartite knowledge graph using the NetworkX library, illustrating interconnections between companies and various risk factors.",
+        "Visualized systemic market risks across diverse economic sectors, providing a comprehensive and interpretable overview for strategic decision-making.",
+        "Developed a scalable solution capable of processing large volumes of unstructured earnings call data into actionable, quantitative risk intelligence.",
+        "Presented findings and visualizations to demonstrate the pipeline's capability in identifying critical risk indicators and their propagation across the S&P 500."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Economics and Business Administration / MSc Business Data Science",
+      "university": "Aalborg University",
+      "dates": "September 2025 - Ongoing"
+    },
+    {
+      "degree": "Bachelor of Business Administration, CGPA: 3.66/4",
+      "university": "Bhaktapur Multiple Campus",
+      "dates": "August 2017 \u2013 July 2022"
+    }
+  ],
+  "certifications": [
+    "DataCamp: Intro & Intermediate Python (2025)",
+    "NCI Trading: Technical Analysis (2023)"
+  ]
+}
