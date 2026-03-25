@@ -63,7 +63,7 @@
 
             try {
                 // Call our FastAPI server
-                const response = await fetch('http://localhost:8000/generate-cv/', {
+                const response = await fetch('http://127.0.0.1:8000/generate-cv/', {
                     method: 'POST',
                     body: formData
                 });
