@@ -30,24 +30,27 @@ This system utilizes a **Routing & Supervisor Agent Architecture** to ensure hig
 ## ⚙️ Local Setup & Installation
 
 **1. Clone the repository**
+
 git clone [https://github.com/xprafulx/agentic-cv-builder.git](https://github.com/xprafulx/agentic-cv-builder.git)
+
 cd agentic-cv-builder
 
 **2. Set up the Python environment**
-`python -m venv venv
-source venv/bin/activate 
-pip install -r requirements.txt`
+- python -m venv venv
+- source venv/bin/activate 
+- pip install -r requirements.txt
 
 **3. Install LaTeX Compiler**
-brew install --cask basictex
-eval "$(/usr/libexec/path_helper)"
+- brew install --cask basictex
+- eval "$(/usr/libexec/path_helper)"
 
 **4. Add API Key**
-Create a .env file in the root:
-GEMINI_API_KEY="your_api_key_here"
+- Create a .env file in the root:
+- GEMINI_API_KEY="your_api_key_here"
 
 **5. Start the Server**
-python -m uvicorn api.py:app --reload
+- python -m uvicorn api.py:app --reload
+
 🚀 Usage
 Open index.html in your browser. Upload your master PDF, paste the job description, and the system will automatically handle the orchestration and download your tailored .pdf.
 
