@@ -1,5 +1,13 @@
-from pydantic import BaseModel
 from typing import List
+from pydantic import BaseModel, Field
+from typing import Optional
+
+class CoverLetterDraft(BaseModel):
+    recipient_name: str = Field(description="The name of the hiring manager, or 'Hiring Team' if unknown.")
+    hook_paragraph: str = Field(description="The opening. Must create tension or grab attention based on the company's core problem.")
+    car_story_1: str = Field(description="A highly relevant story from the CV using the Context, Action, Result method. Simple, human language.")
+    car_story_2: Optional[str] = Field(description="A second, shorter CAR story if needed for technical requirements.")
+    closing_paragraph: str = Field(description="A confident, brief closing statement.")
 
 class ContactInfo(BaseModel):
     email: str = ""
